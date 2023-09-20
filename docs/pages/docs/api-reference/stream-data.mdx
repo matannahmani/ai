@@ -72,9 +72,9 @@ export async function POST(req: Request) {
     experimental_streamData: true,
   });
 
-  data.append({
+  data.append([{
     text: 'Hello, how are you?',
-  });
+  }]);
 
   // IMPORTANT! If you aren't using StreamingTextResponse, you MUST have the `X-Experimental-Stream-Data: 'true'` header
   // in your response so the client uses the correct parsing logic.
